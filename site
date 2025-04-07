@@ -1,0 +1,200 @@
+</html><!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ferrari</title>
+    <style type="text/css">
+        /* Estilo Gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F4F4F4;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        .header {
+            background-color: rgb(255, 0, 0);
+            color: #000000;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: #FFFFFF;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav {
+            background-color: #000000;
+            overflow: hidden;
+        }
+
+        .nav a {
+            float: left;
+            display: block;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav a:hover {
+            background-color: #004080;
+            color: #000000;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #000000;
+            border-bottom: 2px solid #FFFF00;
+            padding-bottom: 10px;
+        }
+
+        .section img {
+            max-width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #CCC;
+            border-radius: 4px;
+        }
+
+        /* Rodapé */
+        .footer {
+            background-color: #FF0000; /* Rodapé vermelho */
+            color: #FFFF00;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .footer .topics {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .footer .topics a {
+            color: #FFFF00;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .footer .topics a:hover {
+            text-decoration: underline;
+        }
+
+        .footer .copy {
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navegação -->
+    <div class="nav">
+        <a href="#Historia"> História</a>
+        <a href="#Premios"> Prêmios</a>
+        <a href="#Curiosidades"> Curiosidades</a>
+    </div>
+
+    <!-- Cabeçalho -->
+    <div class="header">
+        <h1>Scuderia Ferrari</h1>
+    </div>
+
+    <div id="content" class="section">
+        <h2>Bem-vindo à nossa Página Oficial da Scuderia Ferrari</h2>
+        <h4>Esta página irá falar um pouco sobre a história da Ferrari e contar algumas curiosidades</h4>
+
+        <p>A Scuderia Ferrari, atualmente competindo como Scuderia Ferrari HP, é uma equipe de automobilismo da montadora italiana Ferrari que compete no campeonato da Fórmula 1.<br>
+        É a equipe mais antiga em atividade na categoria. A Ferrari é a equipe mais vitoriosa e bem-sucedida da história da F1. No Grande Prêmio da China de 2007, a equipe atingiu a incrível marca de 200 triunfos em Grandes Prêmios.</p>
+
+        <p>
+            <img src="" alt="Leclerc atual piloto da Ferrari comemorando uma vitória na Itália" width="120">
+        </p>
+        <p>
+            <img src="C:\xampp\htdocs\VINICIUS\OIP (2).jpg" alt="Descrição da imagem" width="400">
+        </p>
+    </div> 
+
+    <div id="Historia" class="section">
+        <h2>História</h2>
+        <p>A Scuderia Ferrari foi fundada por Enzo Ferrari em 1929 e tornou-se a equipe de corrida da Alfa Romeo. Em 1938, a Alfa Romeo tomou a decisão de entrar nas corridas com seu próprio nome, o que instituiu a organização Alfa Corse, que absorveu o que havia sido a Ferrari. Enzo Ferrari não concordou com esta mudança na política e foi, finalmente, demitido pela Alfa em 1939. Os termos de sua saída proibiram-no de participar do automobilismo em seu próprio nome, por um período de quatro anos.</p>
+
+        <p>Em 1939, a Ferrari começou a trabalhar em um carro de corrida de sua autoria, o Tipo 815 (oito cilindros, 1,5 L de deslocamento). O 815S, projetado por Alberto Massimino, foi, assim, o primeiro carro da Ferrari. A Segunda Guerra Mundial pôs um fim temporário às corridas. A Ferrari concentrou-se em uma alternativa de uso para sua fábrica durante os anos de guerra, fazendo o trabalho de máquinas-ferramenta.</p>
+
+        <p>Após a guerra, a Ferrari recrutou vários de seus ex-funcionários da Alfa e estabeleceu uma nova Ferrari, querendo projetar e construir seus próprios carros.</p>
+
+        <p>
+            <img src="" alt="Atuais pilotos e o atual carro de 2025" width="90">
+        </p>
+        <p>
+            <img src="C:\xampp\htdocs\VINICIUS\gettyimages-2200467549.avif" alt="Descrição da imagem" width="400">
+            <img src="C:\xampp\htdocs\VINICIUS\gettyimages-2200467659.avif" alt="Descrição da imagem" width="400">
+        </p>
+    </div>
+
+  <div id="Premios" class="section h2">
+            <h1>Premios</h1>
+            <p>A Ferrari é o mais antigo time restante no campeonato, sendo também o mais bem-sucedido: a equipe tem quase todos os recordes da Fórmula 1. Os recordes da equipe <br>incluem quinze títulos do Campeonato Mundial de pilotos (1952, 1953, 1956, 1958, 1961, 1964, 1975, 1977, 1979, 2000, 2001, 2002, 2003, 2004, 2007),<br> dezesseis títulos do Campeonato Mundial de Construtores (1961, 1964, 1975, 1976, 1977, 1979, 1982, 1983, 1999, 2000, 2001, 2002, 2003, 2004, 2007 e 2008), 243 vitórias em Grande Prêmio,<br> 9.564 pontos, 803 pódios, 246 pole positions, 259 voltas mais rápidas, 15.667 voltas lideradas, além de ser a primeira e única equipe a ter mais de 1000 Grandes Prêmios.</p>
+
+            <h3>Principais Pilotos</h3>
+            Os principais pilotos da historia da ferrari são Michael Schumacher, Juan Mauel Fangio,Niki Lauda entre outros nomes<br>
+            Titulos de pilotos individuais<br>
+Michael Schumacher  (2000, 2001, 2002, 2003, 2004)<br>
+Alberto Ascari  (1952, 1953)<br>
+Niki Lauda  (1975, 1977)<br>
+Juan Manuel Fangio  (1956)<br>
+Mike Hawthorn   (1958)<br>
+Phil Hill   (1961)<br>
+John Surtees    (1964)<br>
+Jody Scheckter  (1979)<br>
+Kimi Raikkonen  (2007)<br>
+</div>
+
+     <div id="Curiosidades" class="section h2">
+        <h1>Curiosidades</h1>
+        <p><h4>1</h4> A paixão de Enzo Ferrari (1898-1988) pelo automobilismo começou quando ele tinha 10 anos, ao visitar o autódromo de Bolonha, Itália. Aos 13, já sabia dirigir. Enzo entrou para o ramo como mecânico na Contruzioni Mecaniche Nationali, onde trabalhou até a Primeira Guerra Mundial. Aos 20 anos se transferiu para a Alfa Romeo, já como piloto de provas. Partia então para cumprir seu destino de maior construtor mundial de carros de corrida. <br>
+        <img src= "C:\xampp\htdocs\VINICIUS\FERRARI-FUND-253x300.jpg" alt="Descrição da imagem" width="400"><br>
+           <br></p>
+         <h4>2</h4> Em 1º de dezembro de 1929, Enzo abriu a Escuderia Ferrari, em Módena, Itália, onde modificava os carros da Alfa Romeo. Abandonou as pistas em 1933, para chefiar a fantástica equipe de pilotos da Alfa Romeo.
+        <h4>3</h4> Em 1940, Ferrari fabricou seu primeiro protótipo. O carro não tinha nome. Por força do contrato com a Alfa Romeo, ele só poderia batizá-lo quatro anos após deixar a antiga equipe.
+        <h4>4</h4> Bombardeada e destruída duas vezes durante a Segunda Guerra Mundial, a Ferrari foi de Módena para Maranello. Lá, teve que ser reconstruída algumas vezes ainda por causa da guerra. Enzo fez um acordo com o ditador Franco Mussolini: em troca de proteção, ele fabricaria peças para suas máquinas de guerra.
+        <h4>5</h4>O “cavallino rampante”, símbolo da montadora, foi copiado do amuleto usado no avião do herói italiano da Primeira Guerra Mundial Francesco Barraca.
+        <h4>6</h4>O primeiro carro da Ferrari, batizado de Tipo 125, foi lançado em 1947. Seu motor V12 é uma criação de Giaochino Columbo.
+        <h4>7</h4> A Ferrari estreou seu primeiro carro de Fómula 1 no GP de Mônaco de 1950, o segundo da temporada. A primeira vitória só aconteceu no dia 14 de julho de 1951, no Grande Prêmio da Inglaterra, em Silvestone, com o argentino Froilán González. O primeiro título mundial veio no ano seguinte com Alberto Ascari.
+         <h4>8</h4> No ano de 1969, 50% das ações da Ferrari foram vendidas para a Fiat.
+        <h4>9</h4> Enzo Ferrari teve um único filho – Alfredino (ou “Dino”) -, nascido em 1932. O rapaz, que sofria de distrofia muscular, morreu aos 24 anos.
+        <h4>10</h4> O nome oficial do circuito de Ímola, na Itália, é Enzo e Dino Ferrari.</p>
+        </div>
+
+    <!-- Rodapé -->
+    <div class="footer">
+        <h2>Scuderia Ferrari - Pagina Oficial</h2>
+        <div class="topics">
+            <a href="#Historia">História</a>
+            <a href="#Premios">Prêmios</a>
+            <a href="#Curiosidades">Curiosidades</a>
+        </div>
+        <p class="copy">&copy; 2025 SENAI VIDEIRA SC</p>
+    </div>
+
+</body>
+</html>
