@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Energia</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style type="text/css">
+         body {
+           font-family: 'Arial', sans-serif;
+           margin: 0;
+           padding: 0;
+           background-image: url('https://img.freepik.com/fotos-premium/there-are-five-light-bulbs-that-are-hanging-from-the-wall-generative-ai_902846-32199.jpg'); /* Altere a imagem se desejar */
+           background-size: cover;
+           background-position: center;
+           background-repeat: no-repeat;
+          color: #333;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          min-height: 100vh;
+    }   
+
+.container {
+              background: rgba(255, 255, 255, 0.9); /* Fundo branco com opacidade */
+           padding: 20px;
+            border-radius: 8px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+           width: 100%;
+           max-width: 700px;
+           box-sizing: border-box;
+           margin: 20px auto;
+           flex-grow: 1;
+}        
+
+        .header {
+            background-color: #005CA9;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .input-group label {
+            width: 40%;
+            font-weight: bold;
+        }
+
+        .input-group input,
+        .input-group select {
+            width: 55%;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #saida {
+            margin-top: 20px;
+            padding: 10px;
+            background: #e9f9ec;
+            border-left: 5px solid #4CAF50;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .footer {
+            background-color: #005CA9;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .footer .copy {
+            font-size: 15px;
+        }
+
+        .footer .contact-box {
+            background-color: #005CA9;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .footer .contact-box p {
+            margin: 2px 0;
+            font-size: 15px;
+        }
+
+        .footer .contact-box i {
+            margin-right: 3px;
+        }
+        section {
+    .background-image: center;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bem-vindo ao SENAI Videira!</h1>
+        </div>
+
+        <h2>Calculadora de Gasto de Energia</h2>
+
+        <p>Informe o tempo de uso diário (em horas) de cada aparelho:</p>
+
+        <div class="input-group">
+            <label for="geladeira">Geladeira (horas/dia):</label>
+            <input type="number" id="geladeira" min="0" placeholder="Horas/dia">
+        </div>
+
+        <div class="input-group">
+            <label for="arBTU">Ar-condicionado (horas/dia):</label>
+            <select id="arBTU">
+                <option value="0">Selecione</option>
+                <option value="120">9.000 BTUs (~120 kWh/mês)</option>
+                <option value="160">12.000 BTUs (~160 kWh/mês)</option>
+                <option value="220">18.000 BTUs (~220 kWh/mês)</option>
+            </select>
+            <input type="number" id="arPersonalizado" min="0" placeholder="Ou insira horas de uso">
+        </div>
+
+        <div class="input-group">
+            <label for="tv">TV (horas/dia):</label>
+            <input type="number" id="tv" min="0" placeholder="Horas/dia">
+        </div>
+
+        <div class="input-group">
+            <label for="lavadora">Máquina de Lavar (horas/dia):</label>
+            <input type="number" id="lavadora" min="0" placeholder="Horas/dia">
+        </div>
+
+        <div class="input-group">
+            <label for="microondas">Micro-ondas (horas/dia):</label>
+            <input type="number" id="microondas" min="0" placeholder="Horas/dia">
+        </div>
+
+        <div class="input-group">
+            <label for="computador">Computador (horas/dia):</label>
+            <input type="number" id="computador" min="0" placeholder="Horas/dia">
+        </div>
+
+        <div class="input-group">
+            <label for="chuveiro">Chuveiro Elétrico (horas/dia):</label>
+            <select id="chuveiro">
+                <option value="0">Selecione</option>
+                <option value="32">3.200W (~32 kWh/mês)</option>
+                <option value="45">4.500W (~45 kWh/mês)</option>
+                <option value="55">5.500W (~55 kWh/mês)</option>
+            </select>
+            <input type="number" id="chuveiroPersonalizado" min="0" placeholder="Ou insira horas de uso">
+        </div>
+
+        <div class="input-group">
+            <label for="kwh">Valor do kWh (R$):</label>
+            <input type="number" id="kwh" value="0.6" step="0.01" min="0" placeholder="Preço do kWh">
+        </div>
+
+        <button onclick="calcula()">Calcular</button>
+
+        <div id="saida"></div>
+    </div>
+
+    <div class="footer">
+        <div class="copy">
+            &copy; 2025 - SENAI Videira-SC
+        </div>
+        <div class="contact-box">
+            <p><i class="fas fa-envelope"></i> Email: Comercial@senaivideira.br</p>
+            <p><i class="fas fa-phone"></i> Fone: (49) 3531-3500</p>
+            <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Joséfina Henn, nr 85 - Videira SC</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+    function calcula() {
+    var geladeiraHoras = Number(document.getElementById("geladeira").value) || 0;
+    var arBTU = Number(document.getElementById("arBTU").value) || 0;
+    var arPersonalizadoHoras = Number(document.getElementById("arPersonalizado").value) || 0;
+    var tvHoras = Number(document.getElementById("tv").value) || 0;
+    var lavadoraHoras = Number(document.getElementById("lavadora").value) || 0;
+    var microondasHoras = Number(document.getElementById("microondas").value) || 0;
+    var computadorHoras = Number(document.getElementById("computador").value) || 0;
+    var chuveiroWatts = Number(document.getElementById("chuveiro").value) || 0;
+    var chuveiroPersonalizadoHoras = Number(document.getElementById("chuveiroPersonalizado").value) || 0;
+    var kwh = Number(document.getElementById("kwh").value) || 0;
+
+    if (kwh <= 0) {
+        document.getElementById("saida").innerHTML = "<strong>Informe um valor válido para o kWh.</strong>";
+        return;
+    }
+
+    // Consumos
+    var consumoGeladeira = 0.15 * geladeiraHoras * 30;
+    var consumoTV = 0.1 * tvHoras * 30;
+    var consumoLavadora = 0.5 * lavadoraHoras * 30;
+    var consumoMicroondas = 1.0 * microondasHoras * 30;
+    var consumoComputador = 0.2 * computadorHoras * 30;
+
+    // Ar-condicionado (consumo médio de 0.9 kWh por hora padrão)
+    var consumoAr = 0;
+    if (arPersonalizadoHoras > 0) {
+        consumoAr = 0.9 * arPersonalizadoHoras * 30;
+    } else if (arBTU > 0) {
+        // Aproximação do consumo mensal para o modelo escolhido (dividido por 30 para hora/dia)
+        consumoAr = arBTU * 1; // pois o valor já está em kWh/mês
+    }
+
+    // Chuveiro (potência em watts convertida para kWh)
+    var consumoChuveiro = 0;
+    if (chuveiroPersonalizadoHoras > 0 && chuveiroWatts > 0) {
+        consumoChuveiro = (chuveiroWatts / 1000) * chuveiroPersonalizadoHoras * 30;
+    } else if (chuveiroWatts > 0) {
+        consumoChuveiro = chuveiroWatts; // já está em kWh/mês pela opção
+    }
+
+    var totalConsumo = consumoGeladeira + consumoAr + consumoTV + consumoLavadora + consumoMicroondas + consumoComputador + consumoChuveiro;
+
+    if (totalConsumo === 0) {
+        document.getElementById("saida").innerHTML = "<strong>Informe ao menos um aparelho com horas de uso.</strong>";
+        return;
+    }
+
+    var custo = totalConsumo * kwh;
+
+    var alertas = "";
+    var economiaKwh = 0;
+    var economiaReais = 0;
+
+    // Alertas
+    if (arPersonalizadoHoras > 8) {
+        let excesso = arPersonalizadoHoras - 8;
+        let economia = excesso * 0.9 * 30;
+        economiaKwh += economia;
+        alertas += `⚠️ O ar-condicionado está sendo usado por ${arPersonalizadoHoras}h/dia. Reduzir para 8h/dia pode economizar <strong>${economia.toFixed(2)} kWh</strong> por mês.<br>`;
+    }
+
+    if (tvHoras > 4) {
+        let excesso = tvHoras - 4;
+        let economia = excesso * 0.1 * 30;
+        economiaKwh += economia;
+        alertas += `⚠️ A TV está sendo usada por ${tvHoras}h/dia. Reduzir para 4h/dia pode economizar <strong>${economia.toFixed(2)} kWh</strong> por mês.<br>`;
+    }
+
+    if (computadorHoras > 4) {
+        let excesso = computadorHoras - 4;
+        let economia = excesso * 0.2 * 30;
+        economiaKwh += economia;
+        alertas += `⚠️ O computador está sendo usado por ${computadorHoras}h/dia. Reduzir para 4h/dia pode economizar <strong>${economia.toFixed(2)} kWh</strong> por mês.<br>`;
+    }
+
+    if (economiaKwh > 0) {
+        economiaReais = economiaKwh * kwh;
+        alertas += `<br>💡 <strong>Potencial de economia:</strong> ${economiaKwh.toFixed(2)} kWh / R$ ${economiaReais.toFixed(2)} por mês.<br>`;
+    }
+
+    var mensagem = `<strong>Consumo total:</strong> ${totalConsumo.toFixed(2)} kWh<br>`;
+    mensagem += `<strong>Gasto estimado:</strong> R$ ${custo.toFixed(2)}<br><br>`;
+    mensagem += alertas;
+
+    document.getElementById("saida").innerHTML = mensagem;
+}
+</script>
+</body>
+</html>
